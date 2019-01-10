@@ -19,19 +19,20 @@ import (
 	// once you place this file into your project.
 	// For example,
 	//
-	//    sw "github.com/myname/myrepo/go"
+	//    sw "github.com/myfilename/myrepo/go"
 	//
 
-	"github.com/ticquique/raspi-repo/raspi"
+	"github.com/ticquique/raspi-repo/backend/raspi"
 )
 
 func main() {
 
 	raspi.NewDbConnection()
+	os.Setenv("assetsDir", "assets")
 
-	if args := os.Args; len(args) == 2 {
+	if args := os.Args; len(args) == 2 && args[1] == "seed" {
 
-		raspi.SeedDb(args[1])
+		raspi.SeedDb()
 
 	} else {
 
