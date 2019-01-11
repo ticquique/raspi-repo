@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>{{film.Alias}}</p>
+        <p>{{film.title}}</p>
     </div>
 </template>
 <script>

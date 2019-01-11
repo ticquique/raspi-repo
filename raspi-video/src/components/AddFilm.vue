@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form @submit="addFilm">
+        <form>
             <input type="text" v-model="title" name="title" placeholder="Add film title">
             <input type="text" v-model="description" name="description" placeholder="Add film description">
             <input type="submit" value="Submit" class="btn">
@@ -8,6 +8,7 @@
     </div>
 </template>
 <script>
+
 export default {
     name: "AddFilm",
     data() {
@@ -15,7 +16,8 @@ export default {
             title: '',
             description: ''
         }
-    }
+    },
+    methods: {}
 }
 </script>
 <style scoped>
